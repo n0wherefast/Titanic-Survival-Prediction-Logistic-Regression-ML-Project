@@ -43,3 +43,42 @@ This project is ideal as a **portfolio example** of applied data science and mod
 
 ## 📂 Project Structure
 
+titanic-logistic-regression/
+│
+├── data/
+│ └── U4_04_train.csv
+│
+├── notebook/
+│ └── Titanic_Logistic_Regression.ipynb
+│
+├── models/
+│ └── titanic_model.pkl
+│
+├── images/
+│ ├── confusion_matrix.png
+│ ├── shap_summary.png
+│ └── shap_waterfall.png
+│
+├── export_notebook.py
+├── requirements.txt
+└── README.md
+
+
+---
+
+## 🧹 Data Preprocessing
+
+Key preprocessing steps:
+- Missing values handled via **KNNImputer** (`Age`)
+- Dropped non-informative columns: `Cabin`, `Name`, `Ticket`, `PassengerId`
+- One-hot encoding of categorical variables (`Sex`, `Embarked`)
+- Removal of remaining missing rows after cleaning
+
+Example:
+```python
+from sklearn.impute import KNNImputer
+
+imputer = KNNImputer(n_neighbors=5)
+df[['Age']] = imputer.fit_transform(df[['Age']])
+
+
