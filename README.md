@@ -16,4 +16,4 @@ Predire la sopravvivenza dei passeggeri del Titanic utilizzando tecniche di **re
 - **Preprocessing**: Pulizia, gestione dei missing values con KNNImputer
 - **Feature Engineering**: Creazione FamilySize, codifica variabili categoriali
 - **Modellazione**: Addestramento e selezione automatica delle features
-- **Valutazione**: Accuracy, precision, recall, F1-score e interpretabilità con SHAP
+- **Valutazione**: Accuracy, precision, recall, F1-score 
